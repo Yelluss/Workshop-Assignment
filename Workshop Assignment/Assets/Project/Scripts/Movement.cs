@@ -7,12 +7,12 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
 
-    private Rigidbody characterRB; 
+    private Rigidbody characterRB;
 
 
-    private Vector3 movementInput; 
+    private Vector3 movementInput;
 
-    private Vector3 moveDirection; 
+    public Vector3 moveDirection { get; private set; }
 
 
     [SerializeField] private float movementSpeed;
@@ -32,9 +32,11 @@ public class Movement : MonoBehaviour
     {
         if (movementInput != Vector3.zero)
         {
+            //Kan inte ändra värdet på property, bara fields så måste göra detta för att sätta y = 0
+            Vector3 dir = transform.right * movementInput.x + transform.forward * movementInput.z;
+            dir.y = 0;
+            moveDirection = dir;
             
-            moveDirection = transform.right * movementInput.x + transform.forward * movementInput.z;
-            moveDirection.y = 0;
 
             MovePlayer();
             DragControl();

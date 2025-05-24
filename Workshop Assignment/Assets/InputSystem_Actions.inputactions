@@ -440,7 +440,7 @@
                     "name": "WASD",
                     "id": "44608a14-1c34-4393-8245-6c40d117a348",
                     "path": "2DVector",
-                    "interactions": "",
+                    "interactions": "Press(pressPoint=0.0001,behavior=1)",
                     "processors": "",
                     "groups": "",
                     "action": "MovementStop",
