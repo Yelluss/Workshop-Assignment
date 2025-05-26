@@ -7,6 +7,6 @@ The 3 challenges i've implemented are:
   
 I have made the challenges:
 - Sprinting when holding down left shift
--Particle system rain
--Method (coroutine) that plays a random thunder sound every 5 to 10 seconds
+- Particle system rain
+- Method (coroutine) that plays a random thunder sound every 5 to 10 seconds
 
